@@ -1,0 +1,691 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mapas de Vista v0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-03-05 11:09-0300\n"
+"PO-Revision-Date: 2013-05-21 21:14:15+0000\n"
+"Last-Translator: Leo Germani <leogermani@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: /home/leo/devel/mapasdevista/src/wp-content/themes/mapasdevista\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: /home/leo/devel/mapasdevista/src/wp-content/themes/mapasdevista\n"
+"X-Textdomain-Support: yes"
+
+#: mapasdevista-content.php:9
+#: mapasdevista-content.php:10
+#@ mapasdevista
+msgid ", "
+msgstr ", "
+
+#: mapasdevista-content.php:15
+#@ mapasdevista
+msgid "Categories: "
+msgstr "Categorias:"
+
+#: mapasdevista-content.php:19
+#@ mapasdevista
+msgid "Tags: "
+msgstr "Tags:"
+
+#: mapasdevista-loop-filter.php:13
+#: mapasdevista-loop-opened.php:10
+#@ mapasdevista
+msgid "Published by"
+msgstr "Publicado em"
+
+#: functions.php:208
+#: mapasdevista-loop-opened.php:11
+#@ mapasdevista
+msgid "Edit"
+msgstr "Editar"
+
+#: mapasdevista-loop-filter.php:3
+#@ mapasdevista
+msgid "Results"
+msgstr "Resultados"
+
+#: comments.php:21
+#@ mapasdevista
+msgid "Comments"
+msgstr "Comentários"
+
+#: comments.php:23
+#@ mapasdevista
+msgid "No comments"
+msgstr "Nenhum Comentário"
+
+#: comments.php:23
+#@ mapasdevista
+msgid "1 comment"
+msgstr "1 comentário"
+
+#: comments.php:23
+#, php-format
+#@ mapasdevista
+msgid "%s comments"
+msgstr "%s comentários"
+
+#: comments.php:23
+#@ mapasdevista
+msgid "Leave a comment &raquo;"
+msgstr "Deixe um comentário &raquo;"
+
+#: comments.php:29
+#@ mapasdevista
+msgid "&laquo; Older Comments"
+msgstr "&laquo; Comentários anteriores"
+
+#: comments.php:30
+#@ mapasdevista
+msgid "Newer Comments &raquo;"
+msgstr "Comentários recentes &raquo;"
+
+#: comments.php:39
+#@ mapasdevista
+msgid "Leave a comment"
+msgstr "Deixe um comentário"
+
+#: comments.php:53
+#@ mapasdevista
+msgid "comment"
+msgstr "comentário"
+
+#: comments.php:55
+#@ mapasdevista
+msgid "All comments need to be approved"
+msgstr "Todos os comentários precisam ser aprovados"
+
+#: functions.php:33
+#@ mapasdevista
+msgid "Map Menu (top)"
+msgstr "Menu do mapa (topo)"
+
+#: functions.php:34
+#@ mapasdevista
+msgid "Map Menu (side)"
+msgstr "Menu do mapa (lateral)"
+
+#: admin/maps.php:52
+#: admin/metabox-contributor.php:230
+#: admin/metabox.php:104
+#: functions.php:47
+#@ mapasdevista
+msgid "Maps"
+msgstr "Mapas"
+
+#: functions.php:48
+#@ mapasdevista
+msgid "Maps of view"
+msgstr "Mapas de Vista"
+
+#: functions.php:49
+#@ mapasdevista
+msgid "Pins"
+msgstr "Marcadores"
+
+#: functions.php:50
+#@ mapasdevista
+msgid "Settings"
+msgstr "Configurações"
+
+#: functions.php:213
+#, php-format
+#@ mapasdevista
+msgid "By <strong>%s</strong> on <strong>%s</strong> at <strong>%s</strong>."
+msgstr "Por <strong>%s</strong> em <strong>%s</strong> as <strong>%s</strong>."
+
+#: functions.php:214
+#@ mapasdevista
+msgid "Your comment is awaiting moderation."
+msgstr "Seu comentário está aguradando moderação"
+
+#: functions.php:253
+#@ mapasdevista
+msgid "Home Page Map"
+msgstr "Mapa da Home"
+
+#: functions.php:269
+#@ mapasdevista
+msgid "Page automatically created by Mapas de Vista as a placeholder for your map."
+msgstr "Página automaticamente criada pelo Mapas de Vista para receber seu mapa"
+
+#: index.php:88
+#@ mapasdevista
+msgid "Error creating the map: "
+msgstr "Erro criando o mapa:"
+
+#: index.php:94
+#@ mapasdevista
+msgid "You don't have permission to do that"
+msgstr "Você não tem permissão para fazer isso"
+
+#: index.php:101
+#@ mapasdevista
+msgid "Hi there! In order to start using your map:"
+msgstr "Salve! Para começar a usar seu mapa:"
+
+#: index.php:102
+#@ mapasdevista
+msgid "1. set up a page as your home page"
+msgstr "1. Crie uma página e a configure como sua Home Page"
+
+#: index.php:102
+#@ mapasdevista
+msgid "2. create a map in this page"
+msgstr "2. Crie um mapa usando esta página"
+
+#: index.php:105
+#@ mapasdevista
+msgid "Or click here and I'll do it for you:"
+msgstr "Ou clique aqui e eu faço isso pra você"
+
+#: index.php:107
+#@ mapasdevista
+msgid "Create my first map for me"
+msgstr "Crie meu primeiro mapa para mim"
+
+#: admin/theme.php:48
+#@ mapasdevista
+msgid "Theme Options"
+msgstr "Opções de Tema"
+
+#: admin/theme.php:64
+#@ default
+msgid "Maps of View theme options"
+msgstr "Opções do tema Mapas de Vista"
+
+#: admin/theme.php:78
+#@ mapasdevista
+msgid "Header Image"
+msgstr "Imagem do cabeçalho"
+
+#: admin/theme.php:81
+#@ mapasdevista
+msgid "GoogleMaps API Key"
+msgstr "GoogleMaps API Key"
+
+#: admin/theme.php:83
+#@ mapasdevista
+msgid "You will need this if you are running your site outside of your localhost. Even if you use Open Street Maps in the front end, you will use GoogleMaps API to place your posts in the map through the Edit Post interafce"
+msgstr "Você provavelmente vai precisar disso se rodar seu site fora do seu localhost. Mesmo se você usar o Open Street Maps no seu mapa, você ainda vai precisar do Google Maps na página de edição dos posts para posicioná-los no mapa."
+
+#: admin/theme.php:86
+#@ mapasdevista
+msgid "Theme color"
+msgstr "Cor do tema"
+
+#: admin/theme.php:93
+#@ mapasdevista
+msgid "Background color"
+msgstr "Cor de fundo"
+
+#: admin/theme.php:100
+#@ mapasdevista
+msgid "Background opacity"
+msgstr "Opacidade do fundo"
+
+#: admin/theme.php:104
+#@ mapasdevista
+msgid "Font color"
+msgstr "Cor da fonte"
+
+#: admin/theme.php:112
+#@ mapasdevista
+msgid "Link color"
+msgstr "Cor do link"
+
+#: admin/maps.php:400
+#: admin/theme.php:126
+#@ mapasdevista
+#@ default
+msgid "Save Changes"
+msgstr "Salvar modificações"
+
+#: admin/metabox-contributor.php:142
+#: admin/metabox.php:29
+#: admin/metabox.php:47
+#@ mapasdevista
+msgid "Place it on the map"
+msgstr "Posicione no mapa"
+
+#: admin/maps.php:138
+#: admin/maps.php:157
+#: admin/maps.php:172
+#: admin/metabox-contributor.php:189
+#: admin/metabox.php:72
+#@ mapasdevista
+#@ mpv
+msgid "Latitude"
+msgstr "Latitude"
+
+#: admin/maps.php:142
+#: admin/maps.php:161
+#: admin/maps.php:176
+#: admin/metabox-contributor.php:191
+#: admin/metabox.php:75
+#@ mapasdevista
+#@ mpv
+msgid "Longitude"
+msgstr "Longitude"
+
+#: admin/metabox.php:82
+#@ mpv
+msgid "Search address"
+msgstr "Buscar endereço"
+
+#: admin/metabox-contributor.php:206
+#: admin/metabox.php:87
+#: admin/pins.php:160
+#@ mapasdevista
+msgid "Available pins"
+msgstr "Marcadores disponíveis"
+
+#: admin/metabox-contributor.php:233
+#: admin/metabox.php:105
+#@ mapasdevista
+msgid "Mark the maps in which this post is going to appear"
+msgstr "Marque os mapas nos quais esse post deve aparecer"
+
+#: admin/pins.php:31
+#@ default
+msgid "Could not create directory."
+msgstr "Não foi possível criar o diretório"
+
+#: admin/pins.php:88
+#@ mapasdevista
+msgid "Sorry, no such page."
+msgstr "Desculpe, essa página não existe"
+
+#: admin/pins.php:91
+#@ mapasdevista
+msgid "Invalid post ID."
+msgstr "ID do post inválido"
+
+#: admin/pins.php:104
+#@ mapasdevista
+msgid "Edit pin"
+msgstr "Editar marcador"
+
+#: admin/pins.php:111
+#@ default
+msgid "Pin anchor"
+msgstr "Âncora do marcador"
+
+#: admin/pins.php:115
+#@ default
+msgid "Clickable pin"
+msgstr "Marcador clicável"
+
+#: admin/pins.php:118
+#@ default
+msgid "Yes"
+msgstr "Sim"
+
+#: admin/pins.php:122
+#@ default
+msgid "No"
+msgstr "Não"
+
+#: admin/pins.php:168
+#@ default
+msgid "Apagar"
+msgstr "Apagar"
+
+#: admin/pins.php:175
+#@ mapasdevista
+msgid "New pin"
+msgstr "Novo Marcador"
+
+#: admin/pins.php:181
+#@ default
+msgid "Upload"
+msgstr "Upload"
+
+#: admin/maps.php:13
+#: admin/maps.php:33
+#@ mapasdevista
+msgid "There is another map already in this page. Please choose another page."
+msgstr "Já existe outro mapa nesta página. Por favor selecione outra página."
+
+#: admin/maps.php:85
+#@ mapasdevista
+msgid "Select the page that will be the placeholder for this map"
+msgstr "Selecione a página onde você quer que esse mapa apareça"
+
+#: admin/maps.php:90
+#@ mapasdevista
+msgid "Map Name"
+msgstr "Nome do mapa"
+
+#: admin/maps.php:93
+#@ mapasdevista
+msgid "Map API"
+msgstr "API de mapas"
+
+#: admin/maps.php:105
+#@ mapasdevista
+msgid "Image as map"
+msgstr "Imagem como mapa"
+
+#: admin/maps.php:110
+#@ mapasdevista
+msgid "Map initial state"
+msgstr "Estado inicial do mapa"
+
+#: admin/maps.php:118
+#: admin/maps.php:212
+#@ mapasdevista
+#@ default
+msgid "Map type"
+msgstr "Tipo do mapa"
+
+#: admin/maps.php:122
+#@ mapasdevista
+msgid "Road"
+msgstr "Estradas"
+
+#: admin/maps.php:126
+#@ mapasdevista
+msgid "Satellite"
+msgstr "Satelite"
+
+#: admin/maps.php:130
+#@ mapasdevista
+msgid "Hybrid"
+msgstr "Híbrido"
+
+#: admin/maps.php:135
+#@ mapasdevista
+msgid "Initial position"
+msgstr "Posição inicial"
+
+#: admin/maps.php:153
+#@ mapasdevista
+msgid "North East limit position"
+msgstr "Limite nordeste"
+
+#: admin/maps.php:154
+#: admin/maps.php:169
+#: admin/maps.php:183
+#@ mapasdevista
+msgid "Empty for no limit."
+msgstr "Deixe vazio para sem limite"
+
+#: admin/maps.php:154
+#: admin/maps.php:169
+#@ mapasdevista
+msgid "Capture current position"
+msgstr "Capturar posição atual"
+
+#: admin/maps.php:168
+#@ mapasdevista
+msgid "South West limit position"
+msgstr "Limite sudoeste"
+
+#: admin/maps.php:182
+#@ mapasdevista
+msgid "Zoom limit"
+msgstr "Limite de zoom"
+
+#: admin/maps.php:188
+#: admin/maps.php:193
+#@ mapasdevista
+msgid "Capture current level"
+msgstr "Capturar zoom atual"
+
+#: admin/maps.php:202
+#@ default
+msgid "Show controls"
+msgstr "Mostrar controles"
+
+#: admin/maps.php:204
+#@ default
+msgid "Zoom"
+msgstr "Zoom"
+
+#: admin/maps.php:206
+#@ default
+msgid "Large"
+msgstr "Grande"
+
+#: admin/maps.php:207
+#@ default
+msgid "Small"
+msgstr "Pequeno"
+
+#: admin/maps.php:208
+#@ default
+msgid "None"
+msgstr "Nenhum"
+
+#: admin/maps.php:211
+#@ default
+msgid "Pan"
+msgstr "Pan"
+
+#: admin/maps.php:363
+#@ mapasdevista
+msgid "Logical operator"
+msgstr "Operador lógico"
+
+#: admin/maps.php:366
+#@ mapasdevista
+msgid "How the map should handle multiple filters?"
+msgstr "Como o mapa deve lidar com múltiplos filtros?"
+
+#: admin/maps.php:369
+#@ mapasdevista
+msgid "Intersection - Displays posts that match all the filters"
+msgstr "Intersecção - Mostra posts que se enquadram em todos os filtros"
+
+#: admin/maps.php:370
+#@ mapasdevista
+msgid "Union - Displays posts that match at least one of the filters"
+msgstr "União - Mostra posts que se enquadram em qualquer um dos filtros"
+
+#: admin/maps.php:371
+#@ mapasdevista
+msgid "Let the visitor decide"
+msgstr "Deixe o visitante decidir"
+
+#: admin/maps.php:374
+#@ mapasdevista
+msgid "What kind of posts may appear on the map?"
+msgstr "Que tipo de posts podem aparecer neste mapa?"
+
+#: admin/maps.php:383
+#@ mapasdevista
+msgid "What filters should be visible to the visitors?"
+msgstr "Que filtros estarão disponíveis para os visitantes?"
+
+#: admin/maps.php:385
+#@ mapasdevista
+msgid "Filter by new posts (displays 10 most recent posts)"
+msgstr "Filtrar por posts novos (mostra os 10 mais recentes)"
+
+#: admin/maps.php:386
+#@ mapasdevista
+msgid "Filter by post types"
+msgstr "Filtro por 'post types'"
+
+#: admin/maps.php:387
+#@ mapasdevista
+msgid "Filter by Authors"
+msgstr "Filtro por autores"
+
+#: admin/maps.php:389
+#@ mapasdevista
+msgid "Filter by the following taxonomies"
+msgstr "Filtrar pelas seguintes taxonomias"
+
+#: admin/maps.php:411
+#@ mapasdevista
+msgid "Map Saved"
+msgstr "Mapa salvo"
+
+#: admin/maps.php:420
+#@ mapasdevista
+msgid "Map Deleted"
+msgstr "Mapa apagado"
+
+#: admin/maps.php:433
+#@ mapasdevista
+msgid "Map name"
+msgstr "Nome do mapa"
+
+#: admin/maps.php:434
+#@ mapasdevista
+msgid "Page"
+msgstr "Página"
+
+#: admin/maps.php:446
+#@ mapasdevista
+msgid "Untitled"
+msgstr "Sem Título"
+
+#: admin/maps.php:448
+#@ mapasdevista
+msgid "Are you sure you want to permanently delete this map?"
+msgstr "Você quer realmente apagar este mapa?"
+
+#: admin/maps.php:448
+#@ mapasdevista
+msgid "Delete map"
+msgstr "Apagar mapa"
+
+#: admin/maps.php:459
+#@ mapasdevista
+msgid "Add New Map"
+msgstr "Adicionar novo mapa"
+
+#: template/_load-js.php:6
+#@ mapasdevista
+msgid "Loading..."
+msgstr "Carregando..."
+
+#: template/_load-js.php:7
+#@ mapasdevista
+msgid "Please enter your name."
+msgstr "Por favor digite seu nome"
+
+#: template/_load-js.php:8
+#@ mapasdevista
+msgid "Please enter your email address."
+msgstr "Por favor digite seu endereço de email."
+
+#: template/_load-js.php:9
+#@ mapasdevista
+msgid "Please enter a valid email address."
+msgstr "Por favor digite um endereço de email inválido"
+
+#: template/_load-js.php:10
+#@ mapasdevista
+msgid "Please enter your comment"
+msgstr "Por favor insira seu comentário"
+
+#: template/_load-js.php:11
+#@ mapasdevista
+msgid "Your comment has been added."
+msgstr "Seu comentário foi adicionado"
+
+#: template/_load-js.php:12
+#@ mapasdevista
+msgid "Error!"
+msgstr "Erro!"
+
+#: template/_filters.php:9
+#: template/_load-js.php:13
+#@ mapasdevista
+msgid "Show Filters"
+msgstr "Mostrar Filtros"
+
+#: template/_load-js.php:14
+#@ mapasdevista
+msgid "Hide Filters"
+msgstr "Esconder Filtros"
+
+#: template/_filters.php:4
+#: template/_filters.php:5
+#@ mapasdevista
+msgid "Search..."
+msgstr "Busca..."
+
+#: template/_filters.php:17
+#@ mapasdevista
+msgid "Displays posts that match all the filters"
+msgstr "Mostrar posts que se enquadram em todos os filtros"
+
+#: template/_filters.php:18
+#@ mapasdevista
+msgid "Displays posts that match at least one of the filters"
+msgstr "Mostrar posts que se enquadram em qualquer um dos filtros"
+
+#: template/_filters.php:39
+#@ mapasdevista
+msgid "Show most recent posts"
+msgstr "Mostrar os posts mais recentes"
+
+#: template/_filters.php:45
+#@ mapasdevista
+msgid "Content Types"
+msgstr "Tipos de conteúdo"
+
+#: template/_filters.php:63
+#@ mapasdevista
+msgid "Authors"
+msgstr "Autores"
+
+#: template/_header.php:124
+#@ mapasdevista
+msgid "items loaded"
+msgstr "itens carregados"
+
+#: admin/metabox-contributor.php:21
+#@ default
+msgid "Escolha uma categoria"
+msgstr ""
+
+#: admin/metabox-contributor.php:31
+#@ default
+msgid "Áreas"
+msgstr ""
+
+#: admin/metabox-contributor.php:41
+#@ default
+msgid "Envie uma imagem"
+msgstr ""
+
+#: admin/metabox-contributor.php:51
+#@ default
+msgid "Enviar contribuição"
+msgstr ""
+
+#: admin/metabox-contributor.php:60
+#@ default
+msgid "Set featured image"
+msgstr ""
+
+#: admin/metabox-contributor.php:60
+#@ default
+msgid "Adicionar imagem"
+msgstr ""
+
+#: admin/metabox-contributor.php:124
+#@ mapasdevista
+msgid "Indique o local"
+msgstr ""
+
+#: admin/metabox-contributor.php:199
+#@ mpv
+msgid "Digite o endereço"
+msgstr ""
+
