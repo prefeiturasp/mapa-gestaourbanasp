@@ -7,7 +7,8 @@
 
 	include( mapasdevista_get_template('template/_header', null, false) );
 
-	include( mapasdevista_get_template('mapasdevista-loop', 'filter', false) );
+	//include( mapasdevista_get_template('mapasdevista-loop', 'filter', false) );
+    echo '<div id="results" class="clearfix"></div>';
 
 	include( mapasdevista_get_template('mapasdevista-loop', 'bubble', false) );
 

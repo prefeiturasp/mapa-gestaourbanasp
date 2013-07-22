@@ -33,7 +33,7 @@ if ( ! function_exists( 'mapasdevista_setup' ) ):
             'mapasdevista_top' => __( 'Map Menu (top)', 'mapasdevista' ),
             'mapasdevista_side' => __( 'Map Menu (side)', 'mapasdevista' )
         ) );
-        
+
         add_image_size('mapasdevista-thumbnail',270,203,true);
 
     }
@@ -72,9 +72,9 @@ add_action( 'admin_init', 'mapasdevista_admin_init' );
 
 function mapasdevista_admin_init() {
     global $pagenow, $user;
-    
+
     if($pagenow === "post.php" || $pagenow === "post-new.php" || (isset($_GET['page']) && $_GET['page'] === "mapasdevista_maps")) {
-        // api do google maps versao 3 direto 
+        // api do google maps versao 3 direto
         $googleapikey = get_theme_option('google_key');
         $googleapikey = $googleapikey ? "&key=$googleapikey" : '';
         wp_enqueue_script('google-maps-v3', 'http://maps.google.com/maps/api/js?sensor=false' . $googleapikey);
@@ -86,13 +86,13 @@ function mapasdevista_admin_init() {
         wp_enqueue_script('mapstraction-googlev3', mapasdevista_get_baseurl() . '/js/mxn/mxn.googlev3.core-min.js');
         wp_enqueue_script('mapstraction-openlayers', mapasdevista_get_baseurl() . '/js/mxn/mxn.openlayers.core-min.js');
     }
-    
+
     if (isset($_GET['page']) && $_GET['page'] === "mapasdevista_theme_page") {
-        
+
         wp_enqueue_script('jcolorpicker', mapasdevista_get_baseurl() . '/admin/colorpicker/js/colorpicker.js', array('jquery') );
         wp_enqueue_style('colorpicker', mapasdevista_get_baseurl() . '/admin/colorpicker/css/colorpicker.css' );
         wp_enqueue_script('mapasdevista_theme_options', mapasdevista_get_baseurl() . '/admin/mapasdevista_theme_options.js', array('jquery', 'jcolorpicker') );
-    
+
     }
 
     if($pagenow === "post.php" || $pagenow === "post-new.php") {
@@ -105,7 +105,7 @@ function mapasdevista_admin_init() {
         wp_enqueue_script('metabox', mapasdevista_get_baseurl() . '/admin/pins.js' );
     }
 
-		
+
     if ( $user->roles[0] == 'contributor' ) {
     	wp_enqueue_style('mapasdevista-admin', mapasdevista_get_baseurl('template_directory') . '/admin/admin-hidden.css');
     } else {
@@ -131,25 +131,25 @@ function mapasdevista_page_template_redirect() {
 
 
 function mapasdevista_get_template($file, $context = null, $load = true) {
-    
+
     $templates = array();
 	if ( !is_null($context) )
 		$templates[] = "{$file}-{$context}.php";
 
 	$templates[] = "{$file}.php";
-    
+
     if (preg_match('|/wp-content/themes/|', __FILE__)) {
         $found = locate_template($templates, $load, false);
     } else {
         $f = is_null($context) || empty($context) || strlen($context) == 0 ? $file : $file . '-'. $context ;
         $file = $file . '.php';
         $f = $f . '.php';
-        
+
         if (
             file_exists(TEMPLATEPATH . '/' . $f) ||
             file_exists(STYLESHEETPATH . '/' . $f) ||
             file_exists(TEMPLATEPATH . '/' . $file) ||
-            file_exists(STYLESHEETPATH . '/' . $file) 
+            file_exists(STYLESHEETPATH . '/' . $file)
             ) {
             $found = locate_template($templates, $load, false);
         } else {
@@ -159,15 +159,15 @@ function mapasdevista_get_template($file, $context = null, $load = true) {
             else
                 $found = $f;
         }
-            
+
     }
-    
+
     return $found;
-    
+
 }
 
 function mapasdevista_get_baseurl() {
-    
+
     if (preg_match('|[\\\/]wp-content[\\\/]themes[\\\/]|', __FILE__))
         return get_bloginfo('template_directory') . '/';
     else
@@ -195,15 +195,15 @@ function mapasdevista_get_maps() {
 
 // COMMENTS
 
-if (!function_exists('mapasdevista_comment')): 
+if (!function_exists('mapasdevista_comment')):
 
 function mapasdevista_comment($comment, $args, $depth) {
-    $GLOBALS['comment'] = $comment;  
+    $GLOBALS['comment'] = $comment;
     ?>
-    <li <?php comment_class("clearfix"); ?> id="comment-<?php comment_ID(); ?>">        
+    <li <?php comment_class("clearfix"); ?> id="comment-<?php comment_ID(); ?>">
 
 	        <p class="comment-meta alignright bottom">
-	          <?php comment_reply_link(array('depth' => $depth, 'max_depth' => $args['max_depth'])) ?> <?php edit_comment_link( __('Edit', 'mapasdevista'), '| ', ''); ?>          
+	          <?php comment_reply_link(array('depth' => $depth, 'max_depth' => $args['max_depth'])) ?> <?php edit_comment_link( __('Edit', 'mapasdevista'), '| ', ''); ?>
 	        </p>
 	        <div class="comment-entry clearfix">
             <div class="alignleft"><?php echo get_avatar($comment, 66); ?></div>
@@ -218,7 +218,7 @@ function mapasdevista_comment($comment, $args, $depth) {
     <?php
 }
 
-endif; 
+endif;
 
 // IMAGES
 function mapasdevista_get_image($name) {
@@ -230,7 +230,7 @@ function mapasdevista_image($name, $params = null) {
 
     if(is_array($params)) {
         foreach($params as $param=>$value){
-            $extra.= " $param=\"$value\" ";		
+            $extra.= " $param=\"$value\" ";
         }
     }
 
@@ -243,7 +243,7 @@ function mapasdevista_create_homepage_map($args) {
     if (get_option('mapasdevista_created_homepage'))
         return __('You have done this before...', 'mapasdevista');
     */
-    
+
     $params = wp_parse_args(
         $args,
         array(
@@ -260,27 +260,27 @@ function mapasdevista_create_homepage_map($args) {
             'taxonomies' => array('category')
         )
     );
-    
+
     $page = array(
         'post_title' => 'Home Page',
         'post_content' => __('Page automatically created by Mapas de Vista as a placeholder for your map.', 'mapasdevista'),
         'post_status' => 'publish',
         'post_type' => 'page'
     );
-    
+
     $page_id = wp_insert_post($page);
-    
+
     if ($page_id) {
         update_option('show_on_front', 'page');
         update_option('page_on_front', $page_id);
         update_option('page_for_posts', 0);
-        
+
         update_post_meta($page_id, '_mapasdevista', $params);
-        
+
         update_option('mapasdevista_created_homepage', true);
-        
+
         return true;
-        
+
     } else {
         return $page_id;
     }
@@ -290,34 +290,34 @@ function mapasdevista_create_homepage_map($args) {
 add_action('comment_post_redirect', 'mapasdevista_handle_comments_ajax', 10, 2);
 
 function mapasdevista_handle_comments_ajax($location, $comment) {
-    
+
     if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
         die(mapasdevista_get_post_ajax($comment->comment_post_ID));
     } else {
-        return $location;   
+        return $location;
     }
 }
 
 /**
- * 
+ *
  * @global WP_Query $MAPASDEVISTA_POSTS_RCACHE
  * @param int $page_id
  * @param array $mapinfo
  * @param array $postsArgs
- * @return WP_Query 
+ * @return WP_Query
  */
 
 function mapasdevista_get_posts($page_id, $mapinfo, $postsArgs = array()){
     global $MAPASDEVISTA_POSTS_RCACHE;
-    
+
     if(is_object($MAPASDEVISTA_POSTS_RCACHE) && get_class($MAPASDEVISTA_POSTS_RCACHE) === 'WP_Query'){
-        
+
         $MAPASDEVISTA_POSTS_RCACHE->rewind_posts();
         return $MAPASDEVISTA_POSTS_RCACHE;
     }else{
-        
+
         if ($mapinfo['api'] == 'image') {
-            
+
             $postsArgs += array(
                     'posts_per_page'     => -1,
                     'orderby'         => 'post_date',
@@ -344,9 +344,9 @@ function mapasdevista_get_posts($page_id, $mapinfo, $postsArgs = array()){
 
         if (isset($_GET['mapasdevista_search']) && $_GET['mapasdevista_search'] != '')
             $postsArgs['s'] = $_GET['mapasdevista_search'];
-        
-        $MAPASDEVISTA_POSTS_RCACHE = new WP_Query($postsArgs); 
-        
+
+        $MAPASDEVISTA_POSTS_RCACHE = new WP_Query($postsArgs);
+
         return $MAPASDEVISTA_POSTS_RCACHE;
     }
 }
@@ -374,7 +374,7 @@ function remove_meta_boxes() {
     remove_meta_box( 'formatdiv', 'post', 'normal' ); // Post format meta box
     remove_meta_box( 'trackbacksdiv', 'post', 'normal' ); // Trackbacks meta box
     //remove_meta_box( 'commentstatusdiv', 'post', 'normal' ); // Comment status meta box
-    remove_meta_box( 'postimagediv', 'post', 'side' ); // Featured image meta box   
+    remove_meta_box( 'postimagediv', 'post', 'side' ); // Featured image meta box
     remove_meta_box( 'pageparentdiv', 'page', 'side' ); // Page attributes meta box
     //remove_meta_box( 'categorydiv', 'post', 'side' ); // Categories meta box
     remove_action('admin_notices', 'default_password_nag'); // Change password message
@@ -399,13 +399,13 @@ add_action('admin_init', 'set_user_metaboxes'); //I want it to fire every time e
 
 function set_user_metaboxes($user_id=NULL) {
 
-  //These are the metakeys we will need to update  
+  //These are the metakeys we will need to update
   $meta_key['order'] = 'meta-box-order_events';
   $meta_key['hidden'] = 'metaboxhidden_events';
 
   //So this can be used without hooking into user_register
   if ( ! $user_id)
-    $user_id = get_current_user_id(); 
+    $user_id = get_current_user_id();
 
   //Set the default order if it has not been set yet by the user. These are WP handles
   if ( ! get_user_meta( $user_id, $meta_key['order'], true) ) {
@@ -428,7 +428,7 @@ function set_user_metaboxes($user_id=NULL) {
 function remove_screen_options_tab()
     {
         return false;
-    }    
+    }
 add_filter('screen_options_show_screen', 'remove_screen_options_tab');
 
 // Hide admin "Help" tab
@@ -554,7 +554,7 @@ function handle_comments_setting( $data ) {
   if ( current_user_can( 'contributor' )) {
     if ( $data['guid'] == '') {
       //Default new posts to allow comments
-      $data['comment_status'] = "open";        
+      $data['comment_status'] = "open";
     } else {
       //Otherwise ignore comment setting for community_member role users
       unset($data['comment_status']);
@@ -607,7 +607,7 @@ function sb_post_validation() {
     var mpv_lat = document.getElementById("mpv_lat");
     var mpv_search_address = document.getElementById("mpv_search_address");
 
-    if (mpv_lat.value == "") 
+    if (mpv_lat.value == "")
     {
         error=true;
         mpv_search_address.focus();
@@ -619,7 +619,7 @@ function sb_post_validation() {
         mpv_search_address.className += " sucess";
     }
 
-    if (content_form.value=="") 
+    if (content_form.value=="")
     {
         error=true;
         content_form.focus();
@@ -645,7 +645,7 @@ function sb_post_validation() {
         title_form.className += " sucess";
     }
 
-    if (!error) 
+    if (!error)
         {
             jQuery( "form#post #publish" ).click();
             } else {

@@ -62,6 +62,10 @@
             function() {
                 $(this).find("img").attr("src",mapinfo.baseurl+"/img/hide-results.png");
                 $('.hide_when_show_results').hide();
+                jQuery.ajax(mapinfo.baseurl+'/pins-em-formato-lista.php').done(function ( data ) {
+                    $("#results").html(data);
+                });
+
                 $("#results").show();
             },
             function() {
