@@ -1,6 +1,6 @@
-<?php 
-    $theme_options = wp_parse_args( 
-                        get_option('mapasdevista_theme_options'), 
+<?php
+    $theme_options = wp_parse_args(
+                        get_option('mapasdevista_theme_options'),
                         get_theme_default_options()
                     );
     $opacity = (int) $theme_options['bg_opacity'];
@@ -19,7 +19,7 @@
         $bgColor = 'rgba(' . $theme_options['bg_color']['r'] . ',' . $theme_options['bg_color']['g'] . ', ' . $theme_options['bg_color']['b'] . ', ' . $opacity . ')';
         $bgFiltersColor = 'rgba(' . $theme_options['bg_color']['r'] . ',' . $theme_options['bg_color']['g'] . ', ' . $theme_options['bg_color']['b'] . ', ' . $filtersOpacity . ')';
         $fontColor = 'rgb(' . $theme_options['font_color']['r'] . ',' . $theme_options['font_color']['g'] . ', ' . $theme_options['font_color']['b'] . ')';
-        $themeColor = 'rgb(' . $theme_options['theme_color']['r'] . ',' . $theme_options['theme_color']['g'] . ', ' . $theme_options['theme_color']['b'] . ')';    
+        $themeColor = 'rgb(' . $theme_options['theme_color']['r'] . ',' . $theme_options['theme_color']['g'] . ', ' . $theme_options['theme_color']['b'] . ')';
     }
 ?>
 
@@ -82,6 +82,7 @@ li.current-menu-item li a:hover     { background:<?php echo $bgColor; ?> !import
 /* Filters */
 #toggle-filters { background:<?php echo $themeColor; ?>; color:<?php echo $fontColor; ?>; cursor:pointer; float:right; font-weight:bold; padding:4px 14px 2px 10px; text-transform:uppercase; width:177px;}
 #toggle-filters img { margin-right:6px; vertical-align:middle; }
+#OpenLayers_Control_Attribution_2 { float:right; padding:5px; color: #fff; } #OpenLayers_Control_Attribution_2 a, #OpenLayers_Control_Attribution_2 a:hover { color: #fff;}
 #filters { background:<?php echo $bgFiltersColor; ?>; bottom:0; color:<?php echo $fontColor; ?>; height:0; overflow:auto; position:fixed; width:100%; }
 #filters h3 { background:rgba(255,255,255,0.2); color:<?php echo $fontColor; ?>; display:inline-block; font-size:12px; font-weight:bold; margin-left:-18px; padding:9px 18px; text-transform:uppercase; }
 #filters ul { list-style:none; float:left; margin:0; padding:0; width:20%; }

@@ -5,8 +5,12 @@
                 <input id="searchfield" name="mapasdevista_search" type="text" value="<?php echo $searchValue; ?>" title="<?php _e('Search...', 'mapasdevista'); ?>" />
                 <input type="image" src="<?php echo mapasdevista_get_image("submit.png"); ?>"/>
             </form>
+
             <div id="toggle-filters">
                 <?php mapasdevista_image("show-filters.png"); ?> <?php _e('Show Filters', 'mapasdevista'); ?>
+            </div>
+            <div id="OpenLayers_Control_Attribution_2">
+                <a href="http://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap</a>
             </div>
         </div>
 
@@ -27,13 +31,13 @@
                     </div>
                 <?php endif; ?>
                 <?php if (is_array($mapinfo['filters'])): ?>
-                    
+
                     <?php $counter = 1; // to decide when print div.clear ?>
-                    
+
                     <?php foreach ($mapinfo['filters'] as $filter): ?>
 
                         <?php if ($filter == 'new') : ?>
-                            
+
                             <p>
                                 <input type="checkbox" name="filter_by_new" id="filter_by_new" value="1" />
                                 <label for="filter_by_new"><?php _e('Show most recent posts', 'mapasdevista'); ?></label>
@@ -47,7 +51,7 @@
                                 <?php foreach ($mapinfo['post_types'] as $type) : ?>
 
                                     <li>
-                                        <input type="checkbox" class="post_type-filter-checkbox" name="filter_by_post_type[]" value="<?php echo $type; ?>" id="filter_post_type_<?php echo $type; ?>"> 
+                                        <input type="checkbox" class="post_type-filter-checkbox" name="filter_by_post_type[]" value="<?php echo $type; ?>" id="filter_post_type_<?php echo $type; ?>">
                                         <label for="filter_post_type_<?php echo $type; ?>">
                                             <?php echo $wp_post_types[$type]->label; ?>
                                         </label>
@@ -56,18 +60,18 @@
                                 <?php endforeach; ?>
 
                             </ul>
-                            
+
                         <?php elseif ($filter == 'author') : ?>
 
                             <ul class="filter-group" id="filter_author">
                                 <li><h3><?php _e('Authors', 'mapasdevista'); ?></h3></li>
-                                
+
                                 <?php $users = get_users(); ?>
-                                
+
                                 <?php foreach ($users as $user) : ?>
 
                                     <li>
-                                        <input type="checkbox" class="author-filter-checkbox" name="filter_by_author[]" value="<?php echo $user->ID; ?>" id="filter_author_<?php echo $user->ID; ?>"> 
+                                        <input type="checkbox" class="author-filter-checkbox" name="filter_by_author[]" value="<?php echo $user->ID; ?>" id="filter_author_<?php echo $user->ID; ?>">
                                         <label for="filter_author_<?php echo $user->ID; ?>">
                                             <?php echo $user->display_name; ?>
                                         </label>
@@ -101,9 +105,9 @@
                     <?php endforeach; ?>
 
                 <?php endif; ?>
-            
-                
-                
+
+
+
                 <?php
 
                     function mapasdevista_taxonomy_checklist($taxonomy, $parent = 0) {
@@ -111,10 +115,10 @@
                         $cur_page = get_queried_object();
                         $terms = array();
                         $terms_ids = array();
-                        
+
                         $page_id = $cur_page->ID;
                         $posts_ids = $wpdb->get_col("SELECT post_id FROM $wpdb->postmeta WHERE meta_key ='_mpv_inmap' AND meta_value = '$page_id'");
-                       
+
                         foreach($posts_ids as $post_id){
                             $_terms = get_the_terms($post_id, $taxonomy);
                             if(is_array($_terms))
@@ -125,7 +129,7 @@
                                     }
                                 }
                         }
-                        
+
                         if (!is_array($terms) || ( is_array($terms) && sizeof($terms) < 1 ) )
                             return;
 
@@ -157,9 +161,9 @@
                 <?php
                     }
                 ?>
-                
-                
-                
-                
+
+
+
+
             </div>
         </div>
