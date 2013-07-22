@@ -96,7 +96,7 @@ li.current-menu-item li a:hover     { background:<?php echo $bgColor; ?> !import
 
 /* Results */
 #toggle-results { background:<?php echo $bgColor; ?>; cursor:pointer; padding:4px 4px 0 4px; position:fixed; right:0; top:120px; }
-#results { background:<?php echo $bgColor; ?>; color:<?php echo $fontColor; ?>; display:none; max-height:65%; overflow:auto; padding:9px; position:fixed; right:35px; top:120px; width:30%; }
+#results { background:<?php echo $bgColor; ?>; color:<?php echo $fontColor; ?>; display:none; min-height: 200px; max-height:65%; overflow:auto; padding:9px; position:fixed; right:35px; top:120px; width:30%; }
 #results h1 { font-size:18px; margin-bottom:27px; }
 .result { border-bottom:2px solid rgba(0,0,0,0.5); margin-bottom:27px; }
 .result .pin { float:left; width:60px; }

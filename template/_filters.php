@@ -98,11 +98,11 @@
                         <ul class="filter-group filter-taxonomy" id="filter_taxonomy_<?php echo $filter; ?>">
                             <?php mapasdevista_taxonomy_checklist($filter); ?>
                         </ul>
-<?php } ?>
+
                         <?php if( ($counter++) % 5 == 0 ): ?>
                             <div class="clear"></div>
                         <?php endif;?>
-
+<?php } ?>
                     <?php endforeach; ?>
 
                 <?php endif; ?>

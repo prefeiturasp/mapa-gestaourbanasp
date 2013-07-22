@@ -62,8 +62,14 @@
             function() {
                 $(this).find("img").attr("src",mapinfo.baseurl+"/img/hide-results.png");
                 $('.hide_when_show_results').hide();
-                jQuery.ajax(mapinfo.baseurl+'/pins-em-formato-lista.php').done(function ( data ) {
-                    $("#results").html(data);
+                jQuery.ajax(mapinfo.baseurl+'pins-em-formato-lista.php', {
+                    beforeSend : function () {
+                        var target = document.getElementById('results');
+                        var spinner = new Spinner({top:75,left:140, color: '#fff'}).spin(target);
+                    }
+                }).done(function ( data ) {
+                    var target = $("#results");
+                    target.html(data);
                 });
 
                 $("#results").show();
@@ -71,6 +77,7 @@
             function() {
                 $(this).find("img").attr("src",mapinfo.baseurl+"/img/show-results.png");
                 $('.show_when_hide_results').hide();
+                $('#results').html('');
                 $("#results").hide();
             }
             );
