@@ -25,6 +25,16 @@
                     height: (hWindow/3)
                 }, 450);
 
+                jQuery.ajax(mapinfo.baseurl+'html-box-filter.php', {
+                    beforeSend: function () {
+                        var target = document.getElementById('filters');
+                        var spinner = new Spinner({top:(hWindow/3)/2-20, color: '#fff'}).spin(target);
+                    }
+                })
+                .done(function (data) {
+                    jQuery('#filters').html(data);
+                });
+
             },
             function() {
                 $(this).html("<img src='"+mapinfo.baseurl+"/img/show-filters.png'/> " + messages.show_filters);
@@ -401,14 +411,14 @@
 
         // Filters events
 
-        $("#logical_oparator input").click(function (){
+        $("#logical_oparator input").live('click', function (){
             mapstraction.logicalOperator = $(this).val();
             mapstraction.doFilter();
         });
 
         mapstraction.logicalOperator = $("#logical_oparator input").val();
 
-        $('.taxonomy-filter-checkbox').click(function() {
+        $('.taxonomy-filter-checkbox').live('click', function() {
 
             var tax = $(this).attr('name').replace('filter_by_', '').replace('[]', '');
             var val = $(this).val();
@@ -424,7 +434,7 @@
 
         });
 
-        $('.post_type-filter-checkbox').click(function() {
+        $('.post_type-filter-checkbox').live('click', function() {
 
             var val = $(this).val();
 
@@ -439,7 +449,7 @@
 
         });
 
-        $('.author-filter-checkbox').click(function() {
+        $('.author-filter-checkbox').live('click', function() {
 
             var val = $(this).val();
 
@@ -454,7 +464,7 @@
 
         });
 
-        $('#filter_by_new').click(function() {
+        $('#filter_by_new').live('click', function() {
 
             if ( $(this).attr('checked') ) {
                 mapstraction.addFilter('number', 'le', 10);
