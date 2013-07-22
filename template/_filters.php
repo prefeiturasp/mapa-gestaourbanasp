@@ -150,7 +150,9 @@
                                 </label>
                             </li>
 
-                            <?php mapasdevista_taxonomy_checklist($taxonomy, $term->term_id); ?>
+                            <?php
+                                // desabilitado hierarquia de tags
+                                //mapasdevista_taxonomy_checklist($taxonomy, $term->term_id); ?>
 
                         <?php endforeach; ?>
 
